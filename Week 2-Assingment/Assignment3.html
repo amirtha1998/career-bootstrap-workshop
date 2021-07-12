@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+   <meta charset="UTF-8">
+ <script>
+      const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav .container ul li");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+});
+ </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto Mono";
+  font-size: 24px;
+  scroll-behavior: smooth;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+#home {
+  background-color: violet;
+}
+#about {
+  background-color: aquamarine;
+}
+#services {
+  background-color: orange;
+}
+#downloads{
+  background-color: cadetblue;
+}
+#contact{
+  background-color: crimson;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: black;
+}
+nav .container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: right;
+  padding: 10px;
+}
+nav .container ul li {
+  display: inline-block;
+}
+
+nav .container ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+}
+.container ul li:hover .underline {
+	background-color: white;
+	width: 100%;
+}
+.container ul li .underline {
+	height: 3px;
+	background-color: transparent;
+	width: 0%;
+	transition: width 0.2s, background-color 0.5s;
+	margin: 0 auto;
+}
+
+
+.container ul li:active .underline {
+	transition: none;
+	background-color: black;
+}
+      </style>
+   </head>
+<body>
+<nav>
+  <div class="container">
+    <ul>
+      <li class="home active"><a href="#home">Home</a>
+                <div class="underline"></div>
+
+      </li>
+      <li class="about"><a href="#about">About</a>
+                <div class="underline"></div>
+
+      </li>
+      <li class="services"><a href="#services">Services</a>        <div class="underline"></div>
+</li>
+      <li class="downloads"><a href="#downloads">Downloads</a>
+                <div class="underline"></div>
+
+      </li>
+       <li class="contact"><a href="#contact">Contact</a>
+                <div class="underline"></div>
+
+      </li>
+    </ul>
+  </div>
+</nav>
+<section id="home">
+  <h1>Home</h1>
+</section>
+<section id="about">
+  <h1>About</h1>
+</section>
+<section id="services">
+  <h1>Services</h1>
+</section>
+<section id="downloads">
+  <h1>Downloads</h1>
+</section>
+<section id="contact">
+  <h1>Contact</h1>
+</section>
+</body>
+</html>
+

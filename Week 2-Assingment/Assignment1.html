@@ -1,0 +1,66 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: #2090d6;
+        }
+        button{
+            text-transform: uppercase;
+            background-color:#2090d6;
+            width: 100%;
+            color:white;
+            padding: 15px;
+            margin: 20px 0px;
+            border: none;
+            
+        }
+         input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 10px 0;  
+        padding: 12px 20px;   
+          
+        border: 0.2px solid lightgray;   
+        box-sizing: border-box;   
+    }  
+        .container { 
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        padding:45px;   
+          margin: auto;
+            width: 30%;
+            height: inherit;
+        background-color: white;
+            border-radius: 7px;
+            
+    } 
+        a{
+            color:#2090d6;
+            text-decoration: none;
+        }
+    </style>
+    </head>    
+<body>    
+   
+    <form>  
+        <div class="container"> 
+            <center><h2>Login</h2></center>
+            <label>Email: </label>   
+            <input type="text" placeholder="Enter email" name="username" required>  
+            <label>Password: </label>   
+            <input type="password" placeholder="Enter password" name="password" required>
+            <input type="checkbox"> Show Password
+            <button type="submit">Sign in</button>   
+           <center>  Forgot  <a href="#">Username/Password</a>?
+            <br>
+            Don't have an account? <a href="#">SignUp</a>
+            <br></center>   
+        </div>   
+    </form>     
+</body>     
+</html>  
